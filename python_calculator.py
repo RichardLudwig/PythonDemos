@@ -67,7 +67,7 @@ btn_pi = calc_btn(root, "pi", lambda: user_input(3.14), btn_height, btn_width, f
 # Percentage btn
 btn_percentage = calc_btn(root, "%", lambda: user_input("%"), btn_height, btn_width, font, font_size, 1, 3)
 
-#  Row 2
+#  ROW 2
 # 7 btn
 btn_7 = calc_btn(root, "7", lambda: user_input(7), btn_height, btn_width, font, font_size, 2, 0)
 # 8 btn
