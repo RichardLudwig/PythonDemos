@@ -1,0 +1,76 @@
+#region VEXcode Generated Robot Configuration
+import math
+import random
+from vexcode import *
+
+drivetrain = Drivetrain()
+magnet = Electromagnet("magnet", 0)
+pen = Pen()
+brain = Brain()
+left_bumper = Bumper("leftBumper", 1)
+right_bumper = Bumper("rightBumper", 2)
+distance = Distance()
+front_eye = EyeSensor("fronteye", 3)
+down_eye = EyeSensor("downeye", 4)
+location = Location()
+
+#endregion VEXcode Generated Robot Configuration
+myVariable = 0
+
+def when_started1():
+    global myVariable
+
+    # The pen set to "DOWN" will draw lines while the robot is moving.
+    pen.move(DOWN)
+    drivetrain.drive_for(FORWARD, 400, MM)
+    
+    # Robot pen starts writing letter "A".
+    # The pen turns right 90 degrees to create a right angle, and then drives forward 200 mm.
+    for repeat_count in range(3):
+        drivetrain.turn_for(RIGHT, 90, DEGREES)
+        drivetrain.drive_for(FORWARD, 200, MM)
+        wait(5, MSEC)
+    
+    # The pen reverses to avoid drawing new lines while also drawing the "A".
+    drivetrain.drive_for(REVERSE, 200, MM)
+    drivetrain.turn_for(LEFT, 90, DEGREES)
+    drivetrain.drive_for(FORWARD, 200, MM)
+    
+    # The letter "A" is complete.
+    pen.move(UP)
+    drivetrain.turn_for(LEFT, 90, DEGREES)
+    drivetrain.drive_for(FORWARD, 200, MM)
+    drivetrain.turn_for(LEFT, 90, DEGREES)
+    pen.move(DOWN)
+    
+    # Robot pen starts writing letter "B".
+    drivetrain.drive_for(FORWARD, 400, MM)
+    for repeat_count2 in range(3):
+        drivetrain.turn_for(RIGHT, 90, DEGREES)
+        drivetrain.drive_for(FORWARD, 200, MM)
+        wait(5, MSEC)
+    drivetrain.drive_for(REVERSE, 200, MM)
+    drivetrain.turn_for(LEFT, 90, DEGREES)
+    drivetrain.drive_for(FORWARD, 200, MM)
+    drivetrain.turn_for(RIGHT, 90, DEGREES)
+    drivetrain.drive_for(FORWARD, 200, MM)
+    pen.move(UP)
+    
+    # The letter "B" is complete.
+    drivetrain.turn_for(RIGHT, 180, DEGREES)
+    drivetrain.drive_for(FORWARD, 400, MM)
+    pen.move(DOWN)
+    
+    # Robot pen starts writing letter "C".
+    drivetrain.drive_for(FORWARD, 200, MM)
+    drivetrain.drive_for(REVERSE, 200, MM)
+    drivetrain.turn_for(LEFT, 90, DEGREES)
+    drivetrain.drive_for(FORWARD, 400, MM)
+    drivetrain.turn_for(RIGHT, 90, DEGREES)
+    drivetrain.drive_for(FORWARD, 200, MM)
+    
+    # The letter "C" is complete.
+    pen.move(UP)
+    drivetrain.drive_for(FORWARD, 200, MM)
+
+vr_thread(when_started1)
