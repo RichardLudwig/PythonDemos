@@ -34,13 +34,13 @@ ani = animation.FuncAnimation(
 # Labels
 plt.title("Sine Function")
 plt.xlabel('Angle (radians)')
-plt.ylabel('sin(x)', rotation=0) # Rotate ylabel to appear horizontally
+plt.ylabel('sine(x)', rotation=0) # Rotate ylabel to appear horizontally
 
 # Legend
 plt.legend(handles=[mpatches.Patch(color="black", label="Sine")])
 
 # Save plot
-ani.save("animated_sin_plot.gif")
+ani.save("animated_sine_plot.gif")
 
 # Show plot
 plt.show()
