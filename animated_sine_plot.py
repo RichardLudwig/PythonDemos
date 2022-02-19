@@ -9,7 +9,7 @@ fig, ax = plt.subplots() # Initialize figure and subplot axes
 ax.set(xlim=(-3,3), ylim=(-1.1,1.1)) # Sets boundaries of axes
 
 # Plotting axes
-x = np.linspace(-np.pi, np.pi) # x-axis values for sin function
+x = np.linspace(-np.pi, np.pi) # x-axis values for sine function
 line, = ax.plot(
     x, # x-axis
     np.sin(x), # y-axis
